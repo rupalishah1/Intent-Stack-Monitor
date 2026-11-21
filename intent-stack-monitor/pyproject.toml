@@ -1,0 +1,13 @@
+[project]
+name = "intent-stack-monitor"
+version = "0.1.0"
+description = "Catching forbidden goals that AI agents reach through individually allowed actions"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+plot = ["matplotlib>=3.7"]
+test = ["pytest>=7"]
+
+[tool.setuptools]
+packages = ["ism"]

@@ -1,0 +1,570 @@
+{
+  "main": {
+    "config": {
+      "seed": 20261120,
+      "n_benign": 4000,
+      "n_attack": 400,
+      "window": 20,
+      "fprs": [
+        0.01,
+        0.05
+      ],
+      "lookalike_rate": 0.02,
+      "families": [
+        "structuring",
+        "redirect",
+        "pii_egress",
+        "secret_leak"
+      ]
+    },
+    "monitors": [
+      "intent stack",
+      "learned cascade"
+    ],
+    "thresholds": {
+      "0.01": {
+        "intent stack": 1.0,
+        "learned cascade": 1.3615951075842259
+      },
+      "0.05": {
+        "intent stack": 0.93272,
+        "learned cascade": 0.93272
+      }
+    },
+    "benign_fpr": {
+      "0.01": {
+        "intent stack": 0.0,
+        "learned cascade": 0.00775
+      },
+      "0.05": {
+        "intent stack": 0.04175,
+        "learned cascade": 0.04175
+      }
+    },
+    "attacks": {
+      "structuring/plain": {
+        "n": 400,
+        "mean_length": 33.1525,
+        "0.01": {
+          "intent stack": {
+            "blocked": 1.0,
+            "blocked_ci": [
+              0.9904873594003194,
+              1.0
+            ],
+            "detected": 1.0
+          },
+          "learned cascade": {
+            "blocked": 1.0,
+            "blocked_ci": [
+              0.9904873594003194,
+              1.0
+            ],
+            "detected": 1.0
+          }
+        },
+        "0.05": {
+          "intent stack": {
+            "blocked": 1.0,
+            "blocked_ci": [
+              0.9904873594003194,
+              1.0
+            ],
+            "detected": 1.0
+          },
+          "learned cascade": {
+            "blocked": 1.0,
+            "blocked_ci": [
+              0.9904873594003194,
+              1.0
+            ],
+            "detected": 1.0
+          }
+        }
+      },
+      "structuring/evasive": {
+        "n": 400,
+        "mean_length": 77.26,
+        "0.01": {
+          "intent stack": {
+            "blocked": 1.0,
+            "blocked_ci": [
+              0.9904873594003194,
+              1.0
+            ],
+            "detected": 1.0
+          },
+          "learned cascade": {
+            "blocked": 1.0,
+            "blocked_ci": [
+              0.9904873594003194,
+              1.0
+            ],
+            "detected": 1.0
+          }
+        },
+        "0.05": {
+          "intent stack": {
+            "blocked": 1.0,
+            "blocked_ci": [
+              0.9904873594003194,
+              1.0
+            ],
+            "detected": 1.0
+          },
+          "learned cascade": {
+            "blocked": 1.0,
+            "blocked_ci": [
+              0.9904873594003194,
+              1.0
+            ],
+            "detected": 1.0
+          }
+        }
+      },
+      "redirect/plain": {
+        "n": 400,
+        "mean_length": 32.4875,
+        "0.01": {
+          "intent stack": {
+            "blocked": 0.0,
+            "blocked_ci": [
+              0.0,
+              0.009512640599680667
+            ],
+            "detected": 0.0
+          },
+          "learned cascade": {
+            "blocked": 0.83,
+            "blocked_ci": [
+              0.7900900795523471,
+              0.8636315776518637
+            ],
+            "detected": 0.83
+          }
+        },
+        "0.05": {
+          "intent stack": {
+            "blocked": 1.0,
+            "blocked_ci": [
+              0.9904873594003194,
+              1.0
+            ],
+            "detected": 1.0
+          },
+          "learned cascade": {
+            "blocked": 1.0,
+            "blocked_ci": [
+              0.9904873594003194,
+              1.0
+            ],
+            "detected": 1.0
+          }
+        }
+      },
+      "redirect/evasive": {
+        "n": 400,
+        "mean_length": 69.3275,
+        "0.01": {
+          "intent stack": {
+            "blocked": 0.005,
+            "blocked_ci": [
+              0.0013722242215711469,
+              0.018045289972112716
+            ],
+            "detected": 0.005
+          },
+          "learned cascade": {
+            "blocked": 0.9875,
+            "blocked_ci": [
+              0.9710758472688621,
+              0.9946493281464495
+            ],
+            "detected": 0.9875
+          }
+        },
+        "0.05": {
+          "intent stack": {
+            "blocked": 1.0,
+            "blocked_ci": [
+              0.9904873594003194,
+              1.0
+            ],
+            "detected": 1.0
+          },
+          "learned cascade": {
+            "blocked": 1.0,
+            "blocked_ci": [
+              0.9904873594003194,
+              1.0
+            ],
+            "detected": 1.0
+          }
+        }
+      },
+      "pii_egress/plain": {
+        "n": 400,
+        "mean_length": 40.2175,
+        "0.01": {
+          "intent stack": {
+            "blocked": 1.0,
+            "blocked_ci": [
+              0.9904873594003194,
+              1.0
+            ],
+            "detected": 1.0
+          },
+          "learned cascade": {
+            "blocked": 1.0,
+            "blocked_ci": [
+              0.9904873594003194,
+              1.0
+            ],
+            "detected": 1.0
+          }
+        },
+        "0.05": {
+          "intent stack": {
+            "blocked": 1.0,
+            "blocked_ci": [
+              0.9904873594003194,
+              1.0
+            ],
+            "detected": 1.0
+          },
+          "learned cascade": {
+            "blocked": 1.0,
+            "blocked_ci": [
+              0.9904873594003194,
+              1.0
+            ],
+            "detected": 1.0
+          }
+        }
+      },
+      "pii_egress/evasive": {
+        "n": 400,
+        "mean_length": 159.3625,
+        "0.01": {
+          "intent stack": {
+            "blocked": 1.0,
+            "blocked_ci": [
+              0.9904873594003194,
+              1.0
+            ],
+            "detected": 1.0
+          },
+          "learned cascade": {
+            "blocked": 1.0,
+            "blocked_ci": [
+              0.9904873594003194,
+              1.0
+            ],
+            "detected": 1.0
+          }
+        },
+        "0.05": {
+          "intent stack": {
+            "blocked": 1.0,
+            "blocked_ci": [
+              0.9904873594003194,
+              1.0
+            ],
+            "detected": 1.0
+          },
+          "learned cascade": {
+            "blocked": 1.0,
+            "blocked_ci": [
+              0.9904873594003194,
+              1.0
+            ],
+            "detected": 1.0
+          }
+        }
+      },
+      "secret_leak/plain": {
+        "n": 400,
+        "mean_length": 33.915,
+        "0.01": {
+          "intent stack": {
+            "blocked": 0.0,
+            "blocked_ci": [
+              0.0,
+              0.009512640599680667
+            ],
+            "detected": 0.0
+          },
+          "learned cascade": {
+            "blocked": 1.0,
+            "blocked_ci": [
+              0.9904873594003194,
+              1.0
+            ],
+            "detected": 1.0
+          }
+        },
+        "0.05": {
+          "intent stack": {
+            "blocked": 1.0,
+            "blocked_ci": [
+              0.9904873594003194,
+              1.0
+            ],
+            "detected": 1.0
+          },
+          "learned cascade": {
+            "blocked": 1.0,
+            "blocked_ci": [
+              0.9904873594003194,
+              1.0
+            ],
+            "detected": 1.0
+          }
+        }
+      },
+      "secret_leak/evasive": {
+        "n": 400,
+        "mean_length": 93.41,
+        "0.01": {
+          "intent stack": {
+            "blocked": 0.01,
+            "blocked_ci": [
+              0.0038954207932788126,
+              0.02542696699440824
+            ],
+            "detected": 0.01
+          },
+          "learned cascade": {
+            "blocked": 0.9725,
+            "blocked_ci": [
+              0.951434030711826,
+              0.984576523921476
+            ],
+            "detected": 0.9725
+          }
+        },
+        "0.05": {
+          "intent stack": {
+            "blocked": 1.0,
+            "blocked_ci": [
+              0.9904873594003194,
+              1.0
+            ],
+            "detected": 1.0
+          },
+          "learned cascade": {
+            "blocked": 1.0,
+            "blocked_ci": [
+              0.9904873594003194,
+              1.0
+            ],
+            "detected": 1.0
+          }
+        }
+      }
+    }
+  },
+  "heldout": {
+    "config": {
+      "seed": 20261120,
+      "n_benign": 4000,
+      "n_attack": 400,
+      "window": 20,
+      "fprs": [
+        0.01,
+        0.05
+      ],
+      "lookalike_rate": 0.02,
+      "families": [
+        "po_laundering",
+        "label_laundering"
+      ]
+    },
+    "monitors": [
+      "intent stack",
+      "learned cascade"
+    ],
+    "thresholds": {
+      "0.01": {
+        "intent stack": 1.0,
+        "learned cascade": 1.3615951075842259
+      },
+      "0.05": {
+        "intent stack": 0.93272,
+        "learned cascade": 0.93272
+      }
+    },
+    "benign_fpr": {
+      "0.01": {
+        "intent stack": 0.0,
+        "learned cascade": 0.00775
+      },
+      "0.05": {
+        "intent stack": 0.04175,
+        "learned cascade": 0.04175
+      }
+    },
+    "attacks": {
+      "po_laundering/plain": {
+        "n": 400,
+        "mean_length": 35.1675,
+        "0.01": {
+          "intent stack": {
+            "blocked": 0.0,
+            "blocked_ci": [
+              0.0,
+              0.009512640599680667
+            ],
+            "detected": 0.0
+          },
+          "learned cascade": {
+            "blocked": 0.0025,
+            "blocked_ci": [
+              0.00044143642943440895,
+              0.014023640967247855
+            ],
+            "detected": 0.0075
+          }
+        },
+        "0.05": {
+          "intent stack": {
+            "blocked": 0.0025,
+            "blocked_ci": [
+              0.00044143642943440895,
+              0.014023640967247855
+            ],
+            "detected": 0.0275
+          },
+          "learned cascade": {
+            "blocked": 0.0025,
+            "blocked_ci": [
+              0.00044143642943440895,
+              0.014023640967247855
+            ],
+            "detected": 0.0275
+          }
+        }
+      },
+      "po_laundering/evasive": {
+        "n": 400,
+        "mean_length": 78.0275,
+        "0.01": {
+          "intent stack": {
+            "blocked": 0.005,
+            "blocked_ci": [
+              0.0013722242215711469,
+              0.018045289972112716
+            ],
+            "detected": 0.01
+          },
+          "learned cascade": {
+            "blocked": 0.0225,
+            "blocked_ci": [
+              0.011881448169963291,
+              0.04220312360273175
+            ],
+            "detected": 0.0275
+          }
+        },
+        "0.05": {
+          "intent stack": {
+            "blocked": 0.0525,
+            "blocked_ci": [
+              0.03459126500804263,
+              0.07892254832867157
+            ],
+            "detected": 0.06
+          },
+          "learned cascade": {
+            "blocked": 0.0525,
+            "blocked_ci": [
+              0.03459126500804263,
+              0.07892254832867157
+            ],
+            "detected": 0.06
+          }
+        }
+      },
+      "label_laundering/plain": {
+        "n": 400,
+        "mean_length": 41.215,
+        "0.01": {
+          "intent stack": {
+            "blocked": 0.0,
+            "blocked_ci": [
+              0.0,
+              0.009512640599680667
+            ],
+            "detected": 0.0
+          },
+          "learned cascade": {
+            "blocked": 0.0075,
+            "blocked_ci": [
+              0.0025538429629852373,
+              0.02181610802770022
+            ],
+            "detected": 0.0125
+          }
+        },
+        "0.05": {
+          "intent stack": {
+            "blocked": 0.0075,
+            "blocked_ci": [
+              0.0025538429629852373,
+              0.02181610802770022
+            ],
+            "detected": 0.0225
+          },
+          "learned cascade": {
+            "blocked": 0.0075,
+            "blocked_ci": [
+              0.0025538429629852373,
+              0.02181610802770022
+            ],
+            "detected": 0.0225
+          }
+        }
+      },
+      "label_laundering/evasive": {
+        "n": 400,
+        "mean_length": 181.5875,
+        "0.01": {
+          "intent stack": {
+            "blocked": 0.0075,
+            "blocked_ci": [
+              0.0025538429629852373,
+              0.02181610802770022
+            ],
+            "detected": 0.0075
+          },
+          "learned cascade": {
+            "blocked": 0.025,
+            "blocked_ci": [
+              0.013634943739762435,
+              0.045402064829934204
+            ],
+            "detected": 0.025
+          }
+        },
+        "0.05": {
+          "intent stack": {
+            "blocked": 0.0725,
+            "blocked_ci": [
+              0.05095018845006176,
+              0.1021831192626652
+            ],
+            "detected": 0.0725
+          },
+          "learned cascade": {
+            "blocked": 0.0725,
+            "blocked_ci": [
+              0.05095018845006176,
+              0.1021831192626652
+            ],
+            "detected": 0.0725
+          }
+        }
+      }
+    }
+  }
+}

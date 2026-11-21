@@ -1,0 +1,341 @@
+{
+  "config": {
+    "seed": 20261120,
+    "n_benign": 4000,
+    "n_attack": 400,
+    "window": 20,
+    "fprs": [
+      0.01,
+      0.05
+    ],
+    "lookalike_rate": 0.02,
+    "families": [
+      "po_laundering",
+      "label_laundering"
+    ]
+  },
+  "monitors": [
+    "per-action policy",
+    "aggregate (last 20 steps)",
+    "aggregate (whole session)",
+    "intent stack"
+  ],
+  "thresholds": {
+    "0.01": {
+      "per-action policy": 0.0,
+      "aggregate (last 20 steps)": 0.93304,
+      "aggregate (whole session)": 0.95068,
+      "intent stack": 1.0
+    },
+    "0.05": {
+      "per-action policy": 0.0,
+      "aggregate (last 20 steps)": 0.805,
+      "aggregate (whole session)": 0.91284,
+      "intent stack": 0.93272
+    }
+  },
+  "benign_fpr": {
+    "0.01": {
+      "per-action policy": 0.0,
+      "aggregate (last 20 steps)": 0.008,
+      "aggregate (whole session)": 0.00975,
+      "intent stack": 0.0
+    },
+    "0.05": {
+      "per-action policy": 0.0,
+      "aggregate (last 20 steps)": 0.04225,
+      "aggregate (whole session)": 0.04,
+      "intent stack": 0.04175
+    }
+  },
+  "attacks": {
+    "po_laundering/plain": {
+      "n": 400,
+      "mean_length": 35.1675,
+      "0.01": {
+        "per-action policy": {
+          "blocked": 0.0,
+          "blocked_ci": [
+            0.0,
+            0.009512640599680667
+          ],
+          "detected": 0.0
+        },
+        "aggregate (last 20 steps)": {
+          "blocked": 0.0,
+          "blocked_ci": [
+            0.0,
+            0.009512640599680667
+          ],
+          "detected": 0.0025
+        },
+        "aggregate (whole session)": {
+          "blocked": 0.0,
+          "blocked_ci": [
+            0.0,
+            0.009512640599680667
+          ],
+          "detected": 0.0025
+        },
+        "intent stack": {
+          "blocked": 0.0,
+          "blocked_ci": [
+            0.0,
+            0.009512640599680667
+          ],
+          "detected": 0.0
+        }
+      },
+      "0.05": {
+        "per-action policy": {
+          "blocked": 0.0,
+          "blocked_ci": [
+            0.0,
+            0.009512640599680667
+          ],
+          "detected": 0.0
+        },
+        "aggregate (last 20 steps)": {
+          "blocked": 0.0,
+          "blocked_ci": [
+            0.0,
+            0.009512640599680667
+          ],
+          "detected": 0.035
+        },
+        "aggregate (whole session)": {
+          "blocked": 0.0,
+          "blocked_ci": [
+            0.0,
+            0.009512640599680667
+          ],
+          "detected": 0.02
+        },
+        "intent stack": {
+          "blocked": 0.0025,
+          "blocked_ci": [
+            0.00044143642943440895,
+            0.014023640967247855
+          ],
+          "detected": 0.0275
+        }
+      }
+    },
+    "po_laundering/evasive": {
+      "n": 400,
+      "mean_length": 78.0275,
+      "0.01": {
+        "per-action policy": {
+          "blocked": 0.0,
+          "blocked_ci": [
+            0.0,
+            0.009512640599680667
+          ],
+          "detected": 0.0
+        },
+        "aggregate (last 20 steps)": {
+          "blocked": 0.0075,
+          "blocked_ci": [
+            0.0025538429629852373,
+            0.02181610802770022
+          ],
+          "detected": 0.0075
+        },
+        "aggregate (whole session)": {
+          "blocked": 0.0125,
+          "blocked_ci": [
+            0.005350671853550634,
+            0.02892415273113802
+          ],
+          "detected": 0.02
+        },
+        "intent stack": {
+          "blocked": 0.005,
+          "blocked_ci": [
+            0.0013722242215711469,
+            0.018045289972112716
+          ],
+          "detected": 0.01
+        }
+      },
+      "0.05": {
+        "per-action policy": {
+          "blocked": 0.0,
+          "blocked_ci": [
+            0.0,
+            0.009512640599680667
+          ],
+          "detected": 0.0
+        },
+        "aggregate (last 20 steps)": {
+          "blocked": 0.0325,
+          "blocked_ci": [
+            0.019089659086961887,
+            0.054804659873739545
+          ],
+          "detected": 0.035
+        },
+        "aggregate (whole session)": {
+          "blocked": 0.0475,
+          "blocked_ci": [
+            0.030616832107668652,
+            0.07299210763504237
+          ],
+          "detected": 0.0575
+        },
+        "intent stack": {
+          "blocked": 0.0525,
+          "blocked_ci": [
+            0.03459126500804263,
+            0.07892254832867157
+          ],
+          "detected": 0.06
+        }
+      }
+    },
+    "label_laundering/plain": {
+      "n": 400,
+      "mean_length": 41.215,
+      "0.01": {
+        "per-action policy": {
+          "blocked": 0.0,
+          "blocked_ci": [
+            0.0,
+            0.009512640599680667
+          ],
+          "detected": 0.0
+        },
+        "aggregate (last 20 steps)": {
+          "blocked": 0.0,
+          "blocked_ci": [
+            0.0,
+            0.009512640599680667
+          ],
+          "detected": 0.0025
+        },
+        "aggregate (whole session)": {
+          "blocked": 0.0,
+          "blocked_ci": [
+            0.0,
+            0.009512640599680667
+          ],
+          "detected": 0.005
+        },
+        "intent stack": {
+          "blocked": 0.0,
+          "blocked_ci": [
+            0.0,
+            0.009512640599680667
+          ],
+          "detected": 0.0
+        }
+      },
+      "0.05": {
+        "per-action policy": {
+          "blocked": 0.0,
+          "blocked_ci": [
+            0.0,
+            0.009512640599680667
+          ],
+          "detected": 0.0
+        },
+        "aggregate (last 20 steps)": {
+          "blocked": 0.0025,
+          "blocked_ci": [
+            0.00044143642943440895,
+            0.014023640967247855
+          ],
+          "detected": 0.0175
+        },
+        "aggregate (whole session)": {
+          "blocked": 0.0025,
+          "blocked_ci": [
+            0.00044143642943440895,
+            0.014023640967247855
+          ],
+          "detected": 0.02
+        },
+        "intent stack": {
+          "blocked": 0.0075,
+          "blocked_ci": [
+            0.0025538429629852373,
+            0.02181610802770022
+          ],
+          "detected": 0.0225
+        }
+      }
+    },
+    "label_laundering/evasive": {
+      "n": 400,
+      "mean_length": 181.5875,
+      "0.01": {
+        "per-action policy": {
+          "blocked": 0.0,
+          "blocked_ci": [
+            0.0,
+            0.009512640599680667
+          ],
+          "detected": 0.0
+        },
+        "aggregate (last 20 steps)": {
+          "blocked": 0.0225,
+          "blocked_ci": [
+            0.011881448169963291,
+            0.04220312360273175
+          ],
+          "detected": 0.025
+        },
+        "aggregate (whole session)": {
+          "blocked": 0.03,
+          "blocked_ci": [
+            0.017242849034032177,
+            0.05169903312966765
+          ],
+          "detected": 0.03
+        },
+        "intent stack": {
+          "blocked": 0.0075,
+          "blocked_ci": [
+            0.0025538429629852373,
+            0.02181610802770022
+          ],
+          "detected": 0.0075
+        }
+      },
+      "0.05": {
+        "per-action policy": {
+          "blocked": 0.0,
+          "blocked_ci": [
+            0.0,
+            0.009512640599680667
+          ],
+          "detected": 0.0
+        },
+        "aggregate (last 20 steps)": {
+          "blocked": 0.0375,
+          "blocked_ci": [
+            0.022854824841380277,
+            0.06094436771332434
+          ],
+          "detected": 0.0375
+        },
+        "aggregate (whole session)": {
+          "blocked": 0.065,
+          "blocked_ci": [
+            0.04474017569726697,
+            0.09353582162445521
+          ],
+          "detected": 0.065
+        },
+        "intent stack": {
+          "blocked": 0.0725,
+          "blocked_ci": [
+            0.05095018845006176,
+            0.1021831192626652
+          ],
+          "detected": 0.0725
+        }
+      }
+    }
+  }
+}
